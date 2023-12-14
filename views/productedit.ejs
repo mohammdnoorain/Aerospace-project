@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <%- include ('nav') -%>
+    <div class="container">
+        <div class="row justify-content-center">
+            
+          
+            <div class="col-md-5 mt-5">
+                <h2 class="fw-bold">Create New Account For Free</h2>
+                <form action="/update-product" method="post" enctype="multipart/form-data">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label"> Product Name</label>
+                        <input type="text" name="pname" class="form-control form-control-lg" value="<%=users.
+                        productname %>" id="exampleFormControlInput1" >
+                      </div> 
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label"> Selling price</label>
+                    <input type="text" name="sellingp" class="form-control form-control-lg" value="<%=users.sellingp %>" id="exampleFormControlInput1" >
+                  </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Original price</label>
+                    <input type="text" name="originalp" class="form-control form-control-lg" value="<%=users.
+                    originalp %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Discount Percentage</label>
+                    <input type="text" name="discountp" class="form-control form-control-lg" value="<%=users.
+                    discountpercentage %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Description of Product</label>
+                    <input type="text" name="pdescription" class="form-control form-control-lg" value="<%=users.
+                    description %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Company Description</label>
+                    <input type="text" name="cdescription" class="form-control form-control-lg" value="<%=users.
+                    companydescription %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Company Address</label>
+                    <input type="text" name="caddress" class="form-control form-control-lg"  value="<%=users.companyaddress %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Contact Number of Seller</label>
+                    <input type="text" name="scontact" class="form-control form-control-lg"  value="<%=users.
+                    contactseller %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Product type</label>
+                    <input type="text" name="ptype" class="form-control form-control-lg"  value="<%=users. producttype %>"></div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Product NUmber</label>
+                    <input type="text" name="pnumber" class="form-control form-control-lg"  value="<%=users.
+                    productsku %>" d="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Product MFG</label>
+                    <input type="text" name="pmfg" class="form-control form-control-lg"  value="<%=users.
+                    productmfg %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Product Stock</label>
+                    <input type="text" name="pstock" class="form-control form-control-lg"  value="<%=users.productstock %>" id="exampleFormControlInput1" >
+                </div>
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">Tags</label>
+                    <input type="text" name="ptag" class="form-control form-control-lg"  value="<%=users.tag %>" id="exampleFormControlInput1">
+                </div>
+               
+                <div class="mb-1">
+                    <label for="exampleFormControlInput1" class="form-label">image</label>
+                    <input type="file" name="image" class="form-control form-control-lg"  value="<%=users.image %>"  >
+                </div>
+                
+                <button type="submit" class="btn btn-dark px-4 rounded-pill">Submit Now</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <% 
+    if(typeof message !=='undefined'){
+        %>
+
+        <p style="color: green;"> <%= message %> </p>
+        <%
+    }
+    
+    
+    
+    %>
+</body>
+</html>
